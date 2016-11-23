@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Portfolio- Patrycja Kubienic</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lovers+Quarrel|Open+Sans" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+    </head>
+<body>
+    
+    <header id="header">
+        <h1>Patrycja Kubieniec</h1>  
+        <p>Junior Front End Developer</p>
+            <div class="hire">
+                <a href="#contact">Skontaktuj się</a>
+            </div>
+        <div class="banner"></div>
+        <a href="#about-me"><img src="images/down-arrow.png" alt=""></a>
+    </header>
+   
+
+    <section id="about-me" class="about-me">
+        <h2>Kilka słów o&nbsp;mnie</h2>
+        <div class="about-me-text">
+            <p>Witaj!<br/> Nazywam się Patrycja Kubieniec i jestem studentką II roku Informatyki na WSB w Dąbrowie Górniczej. Programowanie stało się moją pasją, dlatego też większość wolnego czasu przeznaczam na naukę. Jestem osobą ambitną i nie boję się nowych wyzwań. Obecnie szukam stażu lub pierwszej pracy jako front end developer.</p>
+            <a href="#skills">Umiejętności</a>
+        </div>
+        <div class="about-me-photo">
+            <img src="images/computer-768696_1280.jpg" alt="">
+        </div>
+    </section>
+
+    <section class="skills">
+        <h2 id="skills">Umiejętności</h2>
+        <p>Dobra znajomość</p>
+        <ul>
+            <li><img src="images/html_icon.png" alt=""></li>
+            <li><img src="images/css_icon.png" alt=""></li>
+            <li><img src="images/rwd.png" alt=""></li>
+        </ul>
+        <p>Podstawowa znajomość</p>
+        <ul>
+            <li><img src="images/js_icon.png" alt=""></li>
+            <li><img src="images/jquery_icon.png" alt=""></li>
+            <li><img src="images/bootstrap_icon.png" alt=""></li>
+            <li><img src="images/Photoshop_CC_icon.png" alt=""></li>
+            <li><img src="images/git_icon.png" alt=""></li>
+        </ul>
+        <a href="#portfolio">Portfolio</a>
+    </section>
+    
+    
+    <div class="banner-first">
+        <blockquote>
+            <p>"Nauka to pokarm dla rozumu."</p>
+        </blockquote>
+        <h5>Lew Tołstoj</h5>
+    </div>
+    
+
+    <section class="portfolio">
+        <h2 id="portfolio">Portfolio</h2>
+        <ul>
+            <li><a href="#"><img src="images/photo_project_01.png" alt="">Psd / Html / Css3 / Jquery</a></li>
+            <li><a href="#"><img src="images/photo_project_02.png" alt=""> Html / Css3 / Bootstrap</a></li>
+        </ul>
+        <a href="#contact"><img src="images/down-arrow%20(1).png" alt=""></a>
+    </section>
+    
+    
+    <div class="banner-down">
+       <div class="banner-text">
+            <blockquote>
+                <p>"Zawsze przeceniamy zakres zmian jakie nastąpią w ciągu dwóch lat, jednocześnie niedoceniając zmian jakie będą miały miejsce w ciągu dziesięciu lat. Nie można pozwolić sobie na stanie w miejscu."</p>
+            </blockquote>
+            <h5>Bill Gates</h5>
+        </div>
+    </div>
+    
+
+    <section id="contact">
+       <div class="contact">
+           <h2>Kontakt</h2>
+              <div class="contact-content">
+                  <a href="#header"><img src="images/up-arrow.png" alt=""></a>
+                  <p>Poszukuję stażu lub pierwszej pracy jako junior front end developer. W celu nawiązania współpracy, skontaktuj się poprzez formularz <br/>  </p>
+                  <form id="contact-form" action="mail.php" method="post">
+                       <input type="text" name="name" placeholder="imię" required><br />
+                       <input type="email" name="email" placeholder="adres e-mail" required>
+                       <textarea name="message" rows="10" cols="30">Skontaktuj się</textarea>
+                       <input type="submit" value="Wyślij">
+                   </form>
+              </div>
+       </div>
+    </section>
+
+   
+    <footer>
+        <p>&copy;2016 Copyright | Patrycja Kubieniec</p>
+    </footer>
+   
+    
+    
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script>
+        $(function() {
+          $('a[href*="#"]:not([href="#"])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                $('html, body').animate({
+                  scrollTop: target.offset().top
+                }, 1000);
+                return false;} }
+          });
+        });
+</script>
+</body>
+</html>
