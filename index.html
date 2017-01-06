@@ -1,6 +1,3 @@
-<?php
-require_once "mail.php";
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -89,7 +86,16 @@ require_once "mail.php";
               <div class="contact-content">
                   <a href="#header"><img src="images/up-arrow.png" alt=""></a>
                   <p>Poszukuję stażu lub pierwszej pracy jako junior front end developer. W celu nawiązania współpracy, skontaktuj się poprzez formularz <br/>  </p>
-                  
+                  <?php
+                        $to      = 'patrycjakubieniec83@gmail.com';
+                        $subject = $_POST ['subject'];
+                        $message = $_POST ['message'];
+                        $headers = 'From: ' . $_POST ['email'] . "\r\n" .
+                        'Content-type: text/html; charset=utf-8';   
+
+                        mail($to, $subject, $message, $headers);
+                        echo 'E-mail został wysłany';
+                    ?>
                   <form id="contact-form" action="mail.php" method="post">
                        <input type="text" name="name" placeholder="imię" required><br />
                        <input type="email" name="email" placeholder="adres e-mail" required>
