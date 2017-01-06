@@ -1,10 +1,13 @@
+<?php
+require_once "mail.php";
+?>
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <title>Portfolio- Patrycja Kubienic</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Lovers+Quarrel|Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/animate.css" rel="stylesheet" type="text/css">
     </head>
@@ -86,6 +89,7 @@
               <div class="contact-content">
                   <a href="#header"><img src="images/up-arrow.png" alt=""></a>
                   <p>Poszukuję stażu lub pierwszej pracy jako junior front end developer. W celu nawiązania współpracy, skontaktuj się poprzez formularz <br/>  </p>
+                  
                   <form id="contact-form" action="mail.php" method="post">
                        <input type="text" name="name" placeholder="imię" required><br />
                        <input type="email" name="email" placeholder="adres e-mail" required>
